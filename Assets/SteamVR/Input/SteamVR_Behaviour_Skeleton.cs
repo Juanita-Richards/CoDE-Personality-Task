@@ -326,8 +326,8 @@ namespace Valve.VR
             proximals = new Transform[] { thumbProximal, indexProximal, middleProximal, ringProximal, pinkyProximal };
             middles = new Transform[] { thumbMiddle, indexMiddle, middleMiddle, ringMiddle, pinkyMiddle };
             distals = new Transform[] { thumbDistal, indexDistal, middleDistal, ringDistal, pinkyDistal };
-            //tips = new Transform[] { thumbTip, indexTip, middleTip, ringTip, pinkyTip };
-            //auxs = new Transform[] { thumbAux, indexAux, middleAux, ringAux, pinkyAux };
+            tips = new Transform[] { thumbTip, indexTip, middleTip, ringTip, pinkyTip };
+            auxs = new Transform[] { thumbAux, indexAux, middleAux, ringAux, pinkyAux };
 
             CheckSkeletonAction();
         }
@@ -698,7 +698,7 @@ namespace Valve.VR
             {
                 for (int boneIndex = 0; boneIndex < bones.Length; boneIndex++)
                 {
-                    if (bones[boneIndex] == null || boneIndex >= bonePositions.Length || boneIndex >= boneRotations.Length)
+                    if (bones[boneIndex] == null)
                         continue;
 
                     SetBonePosition(boneIndex, bonePositions[boneIndex]);

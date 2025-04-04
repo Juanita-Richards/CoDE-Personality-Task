@@ -1113,17 +1113,6 @@ namespace Valve.VR.InteractionSystem
             }
         }
 
-        //Added Custom Function
-        public void ForceDetach(GameObject target)
-        {
-            if (currentAttachedObject == target)
-            {
-                Debug.Log(currentAttachedObject.name + "\n");
-                Debug.Log(target.name + "\n");
-                DetachObject(target, false);
-            }
-        }
-        //end custom function
         /// <summary>
         /// Returns true when the hand is currently hovering over the interactable passed in
         /// </summary>
@@ -1446,12 +1435,12 @@ namespace Valve.VR.InteractionSystem
 
         public void ShowGrabHint()
         {
-            ControllerButtonHints.ShowButtonHint(this, grabGripAction); //todo: assess
+            ControllerButtonHints.ShowButtonHint(this, grabGripAction);
         }
 
         public void HideGrabHint()
         {
-            ControllerButtonHints.HideButtonHint(this, grabGripAction); //todo: assess
+            ControllerButtonHints.HideTextHint(this, grabGripAction);
         }
 
         public void ShowGrabHint(string text)
@@ -1689,8 +1678,6 @@ namespace Valve.VR.InteractionSystem
         {
             return trackedObject.GetDeviceIndex();
         }
-
-       
     }
 
 

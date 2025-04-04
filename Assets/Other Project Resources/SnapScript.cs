@@ -40,9 +40,10 @@ public class SnapScript : MonoBehaviour
           
             foreach (Hand hand in handScripts)
             {
-                hand.ForceDetach(other.gameObject); //makes sure to force detacment when the sound pop comes on
+                //Disabled because there is some sort of error
+                //hand.ForceDetach(other.gameObject); //makes sure to force detacment when the sound pop comes on
             }
-            
+
             //zero velocity
             Rigidbody body = other.gameObject.GetComponent<Rigidbody>();
             body.velocity = Vector3.zero; 

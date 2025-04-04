@@ -124,9 +124,8 @@ namespace Valve.VR.InteractionSystem
 		}
 
         private void Awake()
-		//changed this to GetComponentInChildren from GetComponent
-		{
-			interactable = this.GetComponent<Interactable>();
+        {
+            interactable = this.GetComponent<Interactable>();
         }
 
         //-------------------------------------------------

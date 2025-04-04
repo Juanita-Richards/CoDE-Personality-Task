@@ -1,7 +1,6 @@
 ﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
 using UnityEngine;
 using System.Collections;
-using UnityEngine.EventSystems;
 
 namespace Valve.VR.Extras
 {
@@ -27,7 +26,6 @@ namespace Valve.VR.Extras
 
         Transform previousContact = null;
 
-        public string selectedAvatar = null;
 
         private void Start()
         {
@@ -101,24 +99,12 @@ namespace Valve.VR.Extras
 
             float dist = 100f;
 
-           
             Ray raycast = new Ray(transform.position, transform.forward);
             RaycastHit hit;
             bool bHit = Physics.Raycast(raycast, out hit);
 
-            // if there is a previous contact and there is nothing being hit
-            if (previousContact != null && !bHit)
-            {
-                IPointerExitHandler hoverHandler = previousContact.gameObject.GetComponent<IPointerExitHandler>();
-                PointerEventData pointerEventData = new PointerEventData(EventSystem.current);
-                hoverHandler.OnPointerExit(pointerEventData);
-            }
-
             if (previousContact && previousContact != hit.transform)
             {
-                IPointerExitHandler hoverHandler = previousContact.gameObject.GetComponent<IPointerExitHandler>();
-                PointerEventData pointerEventData = new PointerEventData(EventSystem.current);
-                hoverHandler.OnPointerExit(pointerEventData);
                 PointerEventArgs args = new PointerEventArgs();
                 args.fromInputSource = pose.inputSource;
                 args.distance = 0f;
@@ -129,11 +115,6 @@ namespace Valve.VR.Extras
             }
             if (bHit && previousContact != hit.transform)
             {
-                // update highlight to new contact
-                IPointerEnterHandler hoverHandler = hit.collider.gameObject.GetComponent<IPointerEnterHandler>();
-                PointerEventData pointerEventData = new PointerEventData(EventSystem.current);
-                hoverHandler.OnPointerEnter(pointerEventData);
-
                 PointerEventArgs argsIn = new PointerEventArgs();
                 argsIn.fromInputSource = pose.inputSource;
                 argsIn.distance = hit.distance;
@@ -143,7 +124,7 @@ namespace Valve.VR.Extras
                 previousContact = hit.transform;
             }
             if (!bHit)
-            {   
+            {
                 previousContact = null;
             }
             if (bHit && hit.distance < 100f)
@@ -153,11 +134,6 @@ namespace Valve.VR.Extras
 
             if (bHit && interactWithUI.GetStateUp(pose.inputSource))
             {
-                // avatar selected
-                IPointerClickHandler clickHandler = hit.collider.gameObject.GetComponent<IPointerClickHandler>();
-                PointerEventData pointerEventData = new PointerEventData(EventSystem.current);
-                clickHandler.OnPointerClick(pointerEventData);
-
                 PointerEventArgs argsClick = new PointerEventArgs();
                 argsClick.fromInputSource = pose.inputSource;
                 argsClick.distance = hit.distance;

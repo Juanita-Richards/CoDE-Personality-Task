@@ -15,7 +15,7 @@ namespace Valve.VR.InteractionSystem
 	[RequireComponent( typeof( Rigidbody ) )]
 	public class Throwable : MonoBehaviour
 	{
-        [EnumFlags]
+		[EnumFlags]
 		[Tooltip( "The flags used to attach this object to the hand." )]
 		public Hand.AttachmentFlags attachmentFlags = Hand.AttachmentFlags.ParentToHand | Hand.AttachmentFlags.DetachFromOtherHand | Hand.AttachmentFlags.TurnOnKinematic;
 
@@ -49,10 +49,8 @@ namespace Valve.VR.InteractionSystem
         protected Quaternion attachRotation;
         protected Transform attachEaseInTransform;
 
-		public UnityEvent onPickUpRight;
-        public UnityEvent onPickUpLeft;
-        public UnityEvent onDetachFromRight;
-        public UnityEvent onDetachFromLeft;
+		public UnityEvent onPickUp;
+        public UnityEvent onDetachFromHand;
         public HandEvent onHeldUpdate;
 
 
@@ -144,10 +142,7 @@ namespace Valve.VR.InteractionSystem
 
             attached = true;
 
-            if (hand.handType == SteamVR_Input_Sources.RightHand)
-                onPickUpRight.Invoke();
-            else if (hand.handType == SteamVR_Input_Sources.LeftHand)
-                onPickUpLeft.Invoke();
+			onPickUp.Invoke();
 
 			hand.HoverLock( null );
 
@@ -160,8 +155,7 @@ namespace Valve.VR.InteractionSystem
 			attachPosition = transform.position;
 			attachRotation = transform.rotation;
 
-
-        }
+		}
 
 
         //-------------------------------------------------
@@ -169,10 +163,7 @@ namespace Valve.VR.InteractionSystem
         {
             attached = false;
 
-            if (hand.handType == SteamVR_Input_Sources.RightHand)
-                onDetachFromRight.Invoke();
-            else if (hand.handType == SteamVR_Input_Sources.LeftHand)
-                onDetachFromLeft.Invoke();
+            onDetachFromHand.Invoke();
 
             hand.HoverUnlock(null);
 

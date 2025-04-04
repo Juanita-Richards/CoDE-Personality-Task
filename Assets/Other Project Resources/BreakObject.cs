@@ -80,7 +80,8 @@ public class BreakObject : MonoBehaviour
 
         foreach (Hand hand in handScripts)
         {
-            hand.ForceDetach(nonBroken); //makes sure to force detacment when the sound pop comes on
+            //Disabled because there is some sort of error
+            //hand.ForceDetach(nonBroken); //makes sure to force detacment when the sound pop comes on
         }
 
         nonBroken.SetActive(false);
