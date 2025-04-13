@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731713, g: 0.13414736, b: 0.12107852, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -35080,7 +35080,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2135113017988337139, guid: 38d45c0900a9d16449de0661d36983e3, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2135113017988660619, guid: 38d45c0900a9d16449de0661d36983e3, type: 3}
       propertyPath: m_RootOrder
@@ -59146,16 +59146,10 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   restoreOriginalParent: 0
-  onPickUpRight:
+  onPickUp:
     m_PersistentCalls:
       m_Calls: []
-  onPickUpLeft:
-    m_PersistentCalls:
-      m_Calls: []
-  onDetachFromRight:
-    m_PersistentCalls:
-      m_Calls: []
-  onDetachFromLeft:
+  onDetachFromHand:
     m_PersistentCalls:
       m_Calls: []
   onHeldUpdate:
@@ -60113,16 +60107,10 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   restoreOriginalParent: 0
-  onPickUpRight:
+  onPickUp:
     m_PersistentCalls:
       m_Calls: []
-  onPickUpLeft:
-    m_PersistentCalls:
-      m_Calls: []
-  onDetachFromRight:
-    m_PersistentCalls:
-      m_Calls: []
-  onDetachFromLeft:
+  onDetachFromHand:
     m_PersistentCalls:
       m_Calls: []
   onHeldUpdate:
@@ -188297,16 +188285,10 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   restoreOriginalParent: 0
-  onPickUpRight:
+  onPickUp:
     m_PersistentCalls:
       m_Calls: []
-  onPickUpLeft:
-    m_PersistentCalls:
-      m_Calls: []
-  onDetachFromRight:
-    m_PersistentCalls:
-      m_Calls: []
-  onDetachFromLeft:
+  onDetachFromHand:
     m_PersistentCalls:
       m_Calls: []
   onHeldUpdate:
@@ -188475,16 +188457,10 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   restoreOriginalParent: 0
-  onPickUpRight:
+  onPickUp:
     m_PersistentCalls:
       m_Calls: []
-  onPickUpLeft:
-    m_PersistentCalls:
-      m_Calls: []
-  onDetachFromRight:
-    m_PersistentCalls:
-      m_Calls: []
-  onDetachFromLeft:
+  onDetachFromHand:
     m_PersistentCalls:
       m_Calls: []
   onHeldUpdate:
@@ -188603,16 +188579,10 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   restoreOriginalParent: 0
-  onPickUpRight:
+  onPickUp:
     m_PersistentCalls:
       m_Calls: []
-  onPickUpLeft:
-    m_PersistentCalls:
-      m_Calls: []
-  onDetachFromRight:
-    m_PersistentCalls:
-      m_Calls: []
-  onDetachFromLeft:
+  onDetachFromHand:
     m_PersistentCalls:
       m_Calls: []
   onHeldUpdate:
@@ -203218,16 +203188,10 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   restoreOriginalParent: 0
-  onPickUpRight:
+  onPickUp:
     m_PersistentCalls:
       m_Calls: []
-  onPickUpLeft:
-    m_PersistentCalls:
-      m_Calls: []
-  onDetachFromRight:
-    m_PersistentCalls:
-      m_Calls: []
-  onDetachFromLeft:
+  onDetachFromHand:
     m_PersistentCalls:
       m_Calls: []
   onHeldUpdate:
