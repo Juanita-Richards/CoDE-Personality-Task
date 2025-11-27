@@ -40,16 +40,19 @@ public class Motion : MonoBehaviour
             var currentScene = SceneManager.GetActiveScene();
             ParticipantID = PID.GetComponent<TMP_InputField>().text;
             Personality = PT.GetComponent<TMP_InputField>().text;
-            log_path = $"Tracking/{currentScene.name}/{ParticipantID}_{Personality}_{DateTime.Now.ToString("MMddyy-HHmm")}.csv";
-            if (!Directory.Exists($"Tracking/{currentScene.name}"))
+            //I changed from Tracking to New_Tracking - 11.26.25
+            log_path = $"New_Tracking/{currentScene.name}/{ParticipantID}_{Personality}_{DateTime.Now.ToString("MMddyy-HHmm")}.csv";
+            if (!Directory.Exists($"New_Tracking/{currentScene.name}"))
             {
-                Directory.CreateDirectory($"Tracking/{currentScene.name}");
+                Directory.CreateDirectory($"New_Tracking/{currentScene.name}");
             }
-            string headers = "Timestamp, TimeElapsed,"; //placeholder for now
+            //string headers = "Timestamp, TimeElapsed,"; //placeholder for now
+            string headers = "TimeStamp,";
             for (int i = 0; i < MotionObjects.Count; i++)
             {
                 string objName = MotionObjects[i].name;
-                headers += $"{objName}_Pos(x),{objName}_Pos(y),{objName}_Pos(z),{objName}_Quat_x,{objName}_Quat_y,{objName}_Quat_z,{objName}_Quat_w,{objName}_Six_x,{objName}_Six_y,{objName}_Six_z,{objName}_Six_a, {objName}_Six_b, {objName}_Six_c,";
+                string label = "Label";
+                headers += $"{objName}_position_x,{objName}_position_y,{objName}_position_z, {objName}_quat_x,{objName}_quat_y,{objName}_quat_z,{objName}_quat_w,{objName}_six_a,{objName}_six_b,{objName}_six_c,{objName}_six_d, {objName}_Six_e, {objName}_Six_f, {label}";
 
             }
 
@@ -68,9 +71,14 @@ public class Motion : MonoBehaviour
         
         if (startTracking)
         {
+            //Add Label definition here
+            var currentScene = SceneManager.GetActiveScene();
+            var gender = PID.GetComponent<TMP_InputField>().text;
+            var personality = PT.GetComponent<TMP_InputField>().text;
 
             timeElapsed += Time.deltaTime;
-            stringBuilder.Append($"\n{DateTime.Now.ToUniversalTime()}, {timeElapsed:0.0000},");
+            //stringBuilder.Append($"\n{DateTime.Now.ToUniversalTime()}, {timeElapsed:0.0000},");
+            stringBuilder.Append($"{timeElapsed:0.0000},"); //Using this for ML format 11.26.25
             for(int i = 0; i < MotionObjects.Count; i++)
             {
                 Quaternion quaternion = MotionObjects[i].transform.rotation;
@@ -78,6 +86,8 @@ public class Motion : MonoBehaviour
                 stringBuilder.Append($"{MotionObjects[i].transform.position.x:0.0000},{MotionObjects[i].transform.position.y:0.0000},{MotionObjects[i].transform.position.z:0.0000},{MotionObjects[i].transform.rotation.x:0.0000}, {MotionObjects[i].transform.rotation.y:0.0000}, {MotionObjects[i].transform.rotation.z:0.0000},{MotionObjects[i].transform.rotation.w:0.0000},");
                 stringBuilder.Append($"{sixDegrees[0]:0.0000}, {sixDegrees[1]:0.0000},{sixDegrees[2]:0.0000},{sixDegrees[3]:0.0000}, {sixDegrees[4]:0.0000}, {sixDegrees[5]:0.0000},");
                 //Debug.Log(MotionObjects[i].transform.position.x);
+
+                stringBuilder.Append($"{personality} | {currentScene.name.Substring(0,1)} | {gender.Substring(10, 1)}");
             }
             
         }
