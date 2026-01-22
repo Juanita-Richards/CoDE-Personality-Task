@@ -2,13 +2,13 @@
   "source": "Unity",
   "applications": [
     {
-      "app_key": "application.generated.unity.finaliktest.exe",
+      "app_key": "application.generated.unity.constructivepersonalitydeceptiontask.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "C:\\Users\\XRT\\OneDrive - University of Central Florida (1)\\Juanita\\Personality-Task_Study\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "action_manifest_path": "C:\\Users\\juani\\CoDE-Personality-Task\\Assets\\StreamingAssets\\SteamVR\\actions.json",
       "strings": {
         "en_us": {
-          "name": "finalIKtest [Testing]"
+          "name": "Constructive-Personality [Testing]"
         }
       }
     }

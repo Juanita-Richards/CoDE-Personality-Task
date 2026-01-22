@@ -1070,7 +1070,7 @@ MonoBehaviour:
   handCollider: {fileID: 0}
   clearanceCheckMask:
     serializedVersion: 2
-    m_Bits: 4294967039
+    m_Bits: 247
   hand: {fileID: 0}
 --- !u!1 &160596
 GameObject:

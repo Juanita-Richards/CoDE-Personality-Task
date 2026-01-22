@@ -87,7 +87,7 @@ public class Motion : MonoBehaviour
                 stringBuilder.Append($"{sixDegrees[0]:0.0000}, {sixDegrees[1]:0.0000},{sixDegrees[2]:0.0000},{sixDegrees[3]:0.0000}, {sixDegrees[4]:0.0000}, {sixDegrees[5]:0.0000},");
                 //Debug.Log(MotionObjects[i].transform.position.x);
 
-                stringBuilder.Append($"{personality} | {currentScene.name.Substring(0,1)} | {gender.Substring(10, 1)}");
+                //stringBuilder.Append($"{personality} | {currentScene.name.Substring(0,1)} | {gender.Substring(10, 1)}");
             }
             
         }
