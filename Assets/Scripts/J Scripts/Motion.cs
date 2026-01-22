@@ -78,7 +78,7 @@ public class Motion : MonoBehaviour
 
             timeElapsed += Time.deltaTime;
             //stringBuilder.Append($"\n{DateTime.Now.ToUniversalTime()}, {timeElapsed:0.0000},");
-            stringBuilder.Append($"{timeElapsed:0.0000},"); //Using this for ML format 11.26.25
+            stringBuilder.Append($"\n{timeElapsed:0.0000},"); //Using this for ML format 11.26.25
             for(int i = 0; i < MotionObjects.Count; i++)
             {
                 Quaternion quaternion = MotionObjects[i].transform.rotation;
