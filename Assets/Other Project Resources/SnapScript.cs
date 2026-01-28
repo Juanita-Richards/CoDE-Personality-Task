@@ -20,7 +20,8 @@ public class SnapScript : MonoBehaviour
 
         EnableOutline();
 
-        handScripts = FindObjectsOfType<Hand>();
+        //handScripts = FindObjectsOfType<Hand>();
+        handScripts = FindObjectsByType<Hand>(FindObjectsSortMode.None);
     }
 
     private void OnTriggerEnter(Collider other) 
@@ -42,6 +43,8 @@ public class SnapScript : MonoBehaviour
             {
                 //Disabled because there is some sort of error
                 //hand.ForceDetach(other.gameObject); //makes sure to force detacment when the sound pop comes on
+                hand.DetachObject(other.gameObject);
+              
             }
 
             //zero velocity

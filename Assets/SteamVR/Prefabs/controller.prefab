@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: -1
-  modelOverride: vr_controller_vive_1_5
+  modelOverride: 
   shader: {fileID: 0}
   verbose: 0
   createComponents: 1
