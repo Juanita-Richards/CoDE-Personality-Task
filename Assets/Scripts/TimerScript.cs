@@ -56,7 +56,7 @@ public class TimerScript : MonoBehaviour
     public static int GetOutlineAmount(DestructiveOutine[] destructiveOutlines)
     {
         int count = 0;
-        destructiveOutlines = FindObjectsOfType<DestructiveOutine>();
+        destructiveOutlines = FindObjectsByType<DestructiveOutine>(FindObjectsSortMode.None);
         foreach (DestructiveOutine destructive in destructiveOutlines)
         {
             count += 1;

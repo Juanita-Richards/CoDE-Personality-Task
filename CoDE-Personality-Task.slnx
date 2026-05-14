@@ -1,6 +1,6 @@
 ﻿<Solution>
-  <Project Path="Assembly-CSharp.csproj" />
   <Project Path="Assembly-CSharp-firstpass.csproj" />
+  <Project Path="Assembly-CSharp.csproj" />
   <Project Path="SteamVR.csproj" />
   <Project Path="SteamVR_Editor.csproj" />
   <Project Path="SteamVR_Input_Editor.csproj" />

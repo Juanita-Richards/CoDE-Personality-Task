@@ -38222,6 +38222,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2826224776268031458, guid: 38d45c0900a9d16449de0661d36983e3, type: 3}
+      propertyPath: handColliderPrefab
+      value: 
+      objectReference: {fileID: 114000013167804218, guid: 2f378ddf4e9373548a3708d26c1d75a4, type: 3}
     - target: {fileID: 3294707970105586323, guid: 38d45c0900a9d16449de0661d36983e3, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -38288,6 +38292,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6747804390977618590, guid: 38d45c0900a9d16449de0661d36983e3, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6772298645878325100, guid: 38d45c0900a9d16449de0661d36983e3, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7259192373587860042, guid: 38d45c0900a9d16449de0661d36983e3, type: 3}
