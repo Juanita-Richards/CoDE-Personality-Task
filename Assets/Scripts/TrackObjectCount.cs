@@ -136,7 +136,7 @@ public class TrackObjectCount : MonoBehaviour
     private static int GetScriptAmount(SnapScript[] snapScripts)
     {
         int count = 0;
-        snapScripts = FindObjectsOfType<SnapScript>();
+        snapScripts = FindObjectsByType<SnapScript>(FindObjectsSortMode.None);
         foreach (SnapScript script in snapScripts)
         {
             count += 1;
@@ -147,7 +147,7 @@ public class TrackObjectCount : MonoBehaviour
     private static int GetDoorAmount(DoorLerpAnim[] doorlerpAnims)
     {
         int count = 0;
-        doorlerpAnims = FindObjectsOfType<DoorLerpAnim>();
+        doorlerpAnims = FindObjectsByType<DoorLerpAnim>(FindObjectsSortMode.None);
         foreach (DoorLerpAnim door in doorlerpAnims)
         {
             //gets all doors with lerp variable == true
