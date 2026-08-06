@@ -38299,6 +38299,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7259192373587860042, guid: 38d45c0900a9d16449de0661d36983e3, type: 3}
+      propertyPath: m_Name
+      value: LeftHand
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259192373587860042, guid: 38d45c0900a9d16449de0661d36983e3, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -38309,6 +38313,10 @@ PrefabInstance:
     - target: {fileID: 7655143771146980471, guid: 38d45c0900a9d16449de0661d36983e3, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7815348434432121585, guid: 38d45c0900a9d16449de0661d36983e3, type: 3}
+      propertyPath: m_Name
+      value: RightHand
       objectReference: {fileID: 0}
     - target: {fileID: 7815348434432121585, guid: 38d45c0900a9d16449de0661d36983e3, type: 3}
       propertyPath: m_IsActive

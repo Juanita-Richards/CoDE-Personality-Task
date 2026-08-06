@@ -47,12 +47,12 @@ public class Motion : MonoBehaviour
                 Directory.CreateDirectory($"New_Tracking/{currentScene.name}");
             }
             //string headers = "Timestamp, TimeElapsed,"; //placeholder for now
-            string headers = "TimeStamp,";
+            string headers = "Timestamp,";
             for (int i = 0; i < MotionObjects.Count; i++)
             {
                 string objName = MotionObjects[i].name;
                 string label = "Label";
-                headers += $"{objName}_position_x,{objName}_position_y,{objName}_position_z, {objName}_quat_x,{objName}_quat_y,{objName}_quat_z,{objName}_quat_w,{objName}_six_a,{objName}_six_b,{objName}_six_c,{objName}_six_d, {objName}_Six_e, {objName}_Six_f, {label}";
+                headers += $"{objName}_position_x,{objName}_position_y,{objName}_position_z,{objName}_quat_x,{objName}_quat_y,{objName}_quat_z,{objName}_quat_w,{objName}_six_a,{objName}_six_b,{objName}_six_c,{objName}_six_d, {objName}_Six_e, {objName}_Six_f, {label}";
 
             }
 

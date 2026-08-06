@@ -46086,11 +46086,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7259192373587860042, guid: 38d45c0900a9d16449de0661d36983e3, type: 3}
       propertyPath: m_Name
-      value: Right Hand
+      value: RightHand
       objectReference: {fileID: 0}
     - target: {fileID: 7815348434432121585, guid: 38d45c0900a9d16449de0661d36983e3, type: 3}
       propertyPath: m_Name
-      value: Left Hand
+      value: LeftHand
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2826224776268031458, guid: 38d45c0900a9d16449de0661d36983e3, type: 3}
