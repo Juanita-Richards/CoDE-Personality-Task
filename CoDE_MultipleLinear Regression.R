@@ -312,7 +312,17 @@ plot(
   type = "n",
   xlab = "Bortner Score",
   ylab = "Head Distance",
-  main = ""
+  main = "",
+  ylim = c(0, 140),
+  yaxt = "n"
+)
+
+# Manually add Y-axis numbers
+axis(
+  side = 2,
+  at = seq(0, 140, by = 20),
+  labels = seq(0, 140, by = 20),
+  las = 1
 )
 
 # Constructive points
